@@ -30,7 +30,6 @@ urlpatterns = [
     path('register/', user_views.register, name='register'),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html', authentication_form = CustomLoginForm), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
-    path('result/', funny_views.results, name='result'),
     path('final/', funny_views.final, name='final'),
     path('pdf/', funny_views.create_pdf, name='pdf')
     ]
